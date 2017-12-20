@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bill Splitter</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body onload="initialize()">
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Bill Splitter</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Manage Roomate<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="manageRoomate.html">Add Roomate</a>
+						</li>
+						<li>
+							<a href="manageRoomate.html">Remove Roomate</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="col-md-3">
+			<h2><b>SELECT ROOMATE</b></h2><br><br>
+			<div id="roomates">No Roomates</div>
+		</div>
+		<div class="col-md-3">
+			<h2><b>SELECTED ROOMATE</b></h2><br><br>
+			<div class="row" id="selectedRoomates"></div>
+			<div class="row">
+				<br><button class="btn btn-danger" type="Clear" onclick="ClearRoomates()">Clear</button>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h2><b>AMOUNT CALCULATOR</b></h2><br><br>
+			<div class="row">
+				<label for="amount">Enter Item Price
+					<input type="number" id="itemPrice" name="itemPrice" placeholder="Item Price" class="form-control">
+				</label>
+				<button class="btn btn-success" onclick="addToTotal()">Add</button>
+			</div>
+			<br>
+			<div class="row">
+				<label for="amount">Total
+					<input type="number" name="amount" id="amount" placeholder="0" class="form-control" readonly="1">
+				</label>
+				<button class="btn btn-success" onclick="Calculate()">Calculate</button>
+			</div>
+			<br>
+			<div class="row">
+				<br><button class="btn btn-danger" type="Clear" onclick="ClearTotalAmount()">Clear</button>
+			</div>
+			<div class="row">
+				<br>After amount is calculated, click on the roommate who paid the amount.<br>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h2><b>WHO OWE'S WHO?</b></h2><br><br>
+			<div class="row" id="oweMeter">
+				Hurray! No one owe's anyting!
+			</div>
+		</div>
+	</div>
+</body>
+</html>

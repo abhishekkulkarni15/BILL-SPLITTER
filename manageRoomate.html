@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bill Splitter</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body onload="getRoomMates()">
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Bill Splitter</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li class="active" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Manage Roomate<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="manageRoomate.html">Add Roomate</a>
+						</li>
+						<li>
+							<a href="manageRoomate.html">Remove Roomate</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container" align="center">
+		<label for="roomateName">Enter Name
+			<input type="text" class="form-control" id="roomateName" placeHolder="Alex">
+		</label>		
+		<button class="btn btn-primary" type="submit" onclick="addRoomMate()">ADD</button>
+	</div>
+	<div class="container" id="roomMateNames">
+	</div>
+</body>
+</html>
